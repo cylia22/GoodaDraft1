@@ -3,44 +3,32 @@
     <div class="row">
         <div class="col-md-6 offset-md-3 col-xl-4 offset-xl-4">
             <div class="card shadow">
-                <h1 class="text-center">New GOODA</h1>
-                <img src="https://res.cloudinary.com/dfofplzot/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1664613498/gooda/gooda/vrijwilliger_csthrp.avif"
+                <h1 class="text-center">New Organization</h1>
+                <img src="https://res.cloudinary.com/dfofplzot/image/upload/v1664613498/gooda/gooda/passion_led_us_here_mcrpdo.avif"
                     alt="" class="card-img-top" />
                 <div class="card-body">
-
-
-
-        <form action="/goodas" method="POST" novalidate class="validated-form" enctype="multipart/form-data">
-
-
-
-            <div>
-                <a class="btn btn-outline-dark" href="/goodas">cancel</a>
-            </div>
+                    <div>
+                        <a class="btn btn-outline-dark" href="/organizations">cancel</a>
+                    </div>
+        <form action="/organizations" method="POST" novalidate class="validated-form" enctype="multipart/form-data">
             <div class="mb-3">
-                <label class="form-label" for="titel">What good stuff did you do?</label>
-                <input class="form-control" type="text" id="title" name="gooda[title]" required>
+                <label class="form-label" for="title">Name of organization</label>
+                <input class="form-control" type="text" id="title" name="organization[title]" required>
                 <div class="valid-feedback">
                     valid
                 </div>
             </div>
-        
             <div class="mb-3">
-                <label class="form-label" for="price">How much did you donate?</label>
-                <div class="input-group">
-                    <span class="input-group-text" id="price-label">$</span>
-                    <input type="text" class="form-control" id="price" placeholder="0.00" aria-label="price"
-                        aria-describedby="price-label" name="gooda[price]">
-                </div>
+                <label class="form-label" for="description">What does your organization do?</label>
+                <textarea class="form-control" type="text" id="description" name="organization[description]"
+                   ></textarea>
                 <div class="valid-feedback">
-                  valid
+                    valid
                 </div>
             </div>
-
             <div class="mb-3">
-                <label class="form-label" for="description">What would you like to share?</label>
-                <textarea class="form-control" type="text" id="description" name="gooda[description]"
-                   ></textarea>
+                <label class="form-label" for="title">What is needed?</label>
+                <input class="form-control" type="text" id="title" name="organization[title]" required>
                 <div class="valid-feedback">
                     valid
                 </div>
@@ -54,36 +42,28 @@
                     </label>
                 </div>
             </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="price">What is the total amount you need to be donated for your organization?</label>
+                <div class="input-group">
+                    <span class="input-group-text" id="price-label">$</span>
+                    <input type="text" class="form-control" id="price" placeholder="0.00" aria-label="price"
+                        aria-describedby="price-label" name="organization[price]">
+                </div>
+                <div class="valid-feedback">
+                  valid
+                </div>
+            </div>
+
+
             <div class="mb-3">
                 <button class="btn btn-danger">Add</button>
             </div>
         </form>
-
         <div>
-            <a class="btn btn-outline-dark" href="/goodas">cancel</a>
+            <a class="btn btn-outline-dark" href="/organizations">cancel</a>
         </div>
-      
+
+       
     </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
