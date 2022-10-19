@@ -1,21 +1,14 @@
+const express = require('express');
+const router = express.Router({ mergeParams: true });
+const { validateReview, isLoggedIn, isReviewAuthor } = require('../middleware');
 const Gooda = require('../models/gooda');
 const Review = require('../models/review');
+const reviews = require('../controllers/reviews');
+const ExpressError = require('../utils/ExpressError');
+const catchAsync = require('../utils/catchAsync');
 
-module.exports.createReview = async (req, res) => {
-    const gooda = await Gooda.findById(req.params.id);
-    const review = new Review(req.body.review);
-    review.author = req.user._id;
-    gooda.reviews.push(review);
-    await review.save();
-    await gooda.save();
-    req.flash('success', 'Created new review!');
-    res.redirect(`/goodas/${gooda._id}`);
-}
+router.post('/', isLoggedIn, validateReview, catchAsync(reviews.createReview))
 
-module.exports.deleteReview = async (req, res) => {
-    const { id, reviewId } = req.params;
-    await Gooda.findByIdAndUpdate(id, { $pull: { reviews: reviewId } });
-    await Review.findByIdAndDelete(reviewId);
-    req.flash('success', 'Successfully deleted review')
-    res.redirect(`/goodas/${id}`);
-}
+router.delete('/:reviewId', isLoggedIn, isReviewAuthor, catchAsync(reviews.deleteReview))
+
+module.exports = router;
