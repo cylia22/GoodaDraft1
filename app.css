@@ -1,0 +1,21 @@
+body {
+    font-style: Inter Tight;
+    font-weight: 500;
+
+}
+
+
+h1 {
+    color: #f96207;
+    font-style: Inter Tight;
+    font-weight: 900;
+    letter-spacing: -3px;
+}
+
+h3, h5, h2 {
+    color: #f96207;
+    font-style: Inter Tight;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
