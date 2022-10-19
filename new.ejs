@@ -1,0 +1,89 @@
+<% layout('layouts/boilerplate')%>
+<div class="container d-flex justify-content-center align-items-center mt-5">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 col-xl-4 offset-xl-4">
+            <div class="card shadow">
+                <h1 class="text-center">New GOODA</h1>
+                <img src="https://res.cloudinary.com/dfofplzot/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1664613498/gooda/gooda/vrijwilliger_csthrp.avif"
+                    alt="" class="card-img-top" />
+                <div class="card-body">
+
+
+
+        <form action="/goodas" method="POST" novalidate class="validated-form" enctype="multipart/form-data">
+
+
+
+            <div>
+                <a class="btn btn-outline-dark" href="/goodas">cancel</a>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="titel">What good stuff did you do?</label>
+                <input class="form-control" type="text" id="title" name="gooda[title]" required>
+                <div class="valid-feedback">
+                    valid
+                </div>
+            </div>
+        
+            <div class="mb-3">
+                <label class="form-label" for="price">How much did you donate?</label>
+                <div class="input-group">
+                    <span class="input-group-text" id="price-label">$</span>
+                    <input type="text" class="form-control" id="price" placeholder="0.00" aria-label="price"
+                        aria-describedby="price-label" name="gooda[price]">
+                </div>
+                <div class="valid-feedback">
+                  valid
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="description">What would you like to share?</label>
+                <textarea class="form-control" type="text" id="description" name="gooda[description]"
+                   ></textarea>
+                <div class="valid-feedback">
+                    valid
+                </div>
+            </div>
+            <div class="mb-3">
+                <div class="form-file custom-file">
+                    <input type="file" class="form-file-input" id="image" name="image" multiple>
+                    <label class="form-file-label" for="image">
+                        <span class="form-file-text custom-file-label">Choose image(s)...</span>
+                        <span class="form-file-button">Browse</span>
+                    </label>
+                </div>
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-danger">Add</button>
+            </div>
+        </form>
+
+        <div>
+            <a class="btn btn-outline-dark" href="/goodas">cancel</a>
+        </div>
+      
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
